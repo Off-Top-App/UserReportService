@@ -1,5 +1,4 @@
 const kafka = require('kafka-node');
-// const bp = require('body-parser');
 const config = require('./config');
 
 try {
@@ -8,7 +7,7 @@ try {
   let consumer = new Consumer(
     client,
     [{
-      topic: config.kafka_topic,
+      topic: 'some-topic',
       partition: 0
     }], {
       autoCommit: true,
@@ -19,11 +18,11 @@ try {
     }
   );
 
-  consumer.on('message', async function(message) {
-    console.log('kafka -> CONSUMED:  ', message.value);
+  consumer.on('message', async function(message){
+    console.log('kafka -> CONSUMED: ', message.value);
   });
 }
 
-catch (e) {
+catch(e){
   console.log(e);
 }

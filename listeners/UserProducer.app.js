@@ -13,7 +13,7 @@ try {
 
   let payloads = [{
     topic: kafka_topic,
-    messages: JSON.stringify({user_id: 1})
+    messages: JSON.stringify({users: null})
   }];
 
   producer.on('ready', async function() {
