@@ -1,4 +1,4 @@
-//class used to migrate userServices.py
+ //class used to migrate userServices.py
 //must migrate 6 functions
 
 function userSesstionDuration(){
